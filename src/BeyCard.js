@@ -1,10 +1,13 @@
 import React from "react";
 
-export default const BeyCard = () => {
+const BeyCard = ({ bey, handleClick }) => {
+
   return (
-    <div className='bey-card'>
-      <h3>{/*Bey name goes here*/}</h3>
-      {/*image tag goes here*/}
+    <div className='bey-card' onClick={ () => handleClick(bey.id) }>
+      <h3>{ bey.name }</h3>
+      <img src={ bey.img } alt={ bey.name }/>
     </div>
   );
 };
+
+export default BeyCard;
